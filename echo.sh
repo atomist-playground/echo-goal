@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo "<<<<<<<<<<<<<<<<<<< ARGS >>>>>>>>>>>>>>>>>>>>"
+echo $@
+echo "<<<<<<<<<<<<<<<<<<< ---- >>>>>>>>>>>>>>>>>>>>"
+
 echo "<<<<<<<<<<<<<<<<<<< ENV >>>>>>>>>>>>>>>>>>>>"
 env
 echo "<<<<<<<<<<<<<<<<<<< --- >>>>>>>>>>>>>>>>>>>>"
@@ -9,8 +13,8 @@ cat $ATOMIST_GOAL
 echo "<<<<<<<<<<<<<<<<<<< ---- >>>>>>>>>>>>>>>>>>>>"
 
 echo "<<<<<<<<<<<<<<<<<<< SECRETS >>>>>>>>>>>>>>>>>>>>"
-cat $ATOMIST_SECRETS
-#echo "<hidden>"
+# cat $ATOMIST_SECRETS
+echo "<hidden>"
 echo "<<<<<<<<<<<<<<<<<<< ------- >>>>>>>>>>>>>>>>>>>>"
 
 echo '{ "state": "waiting_for_approval", "description": "Finished echo goal" }' > $ATOMIST_RESULT
