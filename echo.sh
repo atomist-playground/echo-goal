@@ -5,9 +5,11 @@ env
 echo "<<<<<<<<<<<<<<<<<<< --- >>>>>>>>>>>>>>>>>>>>"
 
 echo "<<<<<<<<<<<<<<<<<<< GOAL >>>>>>>>>>>>>>>>>>>>"
-cat /atm/metadata/goal.json
+cat $ATOMIST_GOAL
 echo "<<<<<<<<<<<<<<<<<<< ---- >>>>>>>>>>>>>>>>>>>>"
 
 echo "<<<<<<<<<<<<<<<<<<< SECRETS >>>>>>>>>>>>>>>>>>>>"
-cat /atm/metadata/secrets.json
+cat $ATOMIST_SECRETS
 echo "<<<<<<<<<<<<<<<<<<< ------- >>>>>>>>>>>>>>>>>>>>"
+
+echo '{ "state": "success", "description": "Finished echo goal" }' > /atm/output/result.json
