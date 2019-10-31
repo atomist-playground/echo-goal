@@ -12,4 +12,4 @@ echo "<<<<<<<<<<<<<<<<<<< SECRETS >>>>>>>>>>>>>>>>>>>>"
 cat $ATOMIST_SECRETS
 echo "<<<<<<<<<<<<<<<<<<< ------- >>>>>>>>>>>>>>>>>>>>"
 
-echo '{ "state": "success", "description": "Finished echo goal" }' > /atm/output/result.json
+echo '{ "state": "waiting_for_approval", "description": "Finished echo goal" }' > /atm/output/result.json
