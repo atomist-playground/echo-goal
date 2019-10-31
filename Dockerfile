@@ -4,4 +4,4 @@ RUN mkdir /app
 
 COPY echo.sh /app/echo.sh
 
-ENTRYPOINT /app/echo.sh
+ENTRYPOINT ["/app/echo.sh"]
